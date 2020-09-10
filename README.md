@@ -10,8 +10,7 @@ This action supports generating outputs with the corresponding values generated 
 
 ## GitHub Action Runner Dependencies
 
- - curl
- - tar
+ - [gitversion-ubuntu.16.04-x64-5.3.7](https://github.com/GitTools/GitVersion/releases/download/5.3.7/gitversion-ubuntu.16.04-x64-5.3.7.tar.gz)
 
 ## Action Output Parameters
 
@@ -48,3 +47,24 @@ This action supports generating outputs with the corresponding values generated 
  | GitVersion_CommitsSinceVersionSource | CommitsSinceVersionSource |
  | GitVersion_CommitsSinceVersionSourcePadded | CommitsSinceVersionSourcePadded |
  | GitVersion_CommitDate | CommitDate |
+
+## Sample Configuration
+
+Use of this action requires that it be preceded by the [checkout](https://github.com/actions/checkout) action with a fetch-depth of 0. This action requires all history for all branches and tags to generate the proper semantic versioning.
+
+### Usage
+ 
+```yml
+name: Semantic Versioning
+runs-on: self-hosted
+steps:
+  - uses: actions/checkout@v2
+    id: checkout
+    with:
+      fetch-depth: 0
+  - name: Generate gitversion properties 
+    uses: walterblacc/gitversion-action@master
+    id: gitversion
+  - run: |
+    echo "GitVersion_SemVer: ${{steps.versioning.outputs.GitVersion_SemVer}}"
+```
