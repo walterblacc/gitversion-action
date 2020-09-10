@@ -70,10 +70,12 @@ runs:
         fetch-depth: 0
     - name: Generate GitVersion
       id: generate-gitversion
+      shell: bash
       run: |
         GITHUB_ACTIONS="true" gitversion /output buildserver
     - name: Output GitVersion
       id: output-gitversion
+      shell: bash
       run: |
         echo "::set-output name=GitVersion_Major::$GitVersion_Major"
         echo "::set-output name=GitVersion_Minor::$GitVersion_Minor"
