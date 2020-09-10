@@ -1,1 +1,1 @@
- - [@pthelusma](https://github.com/pthelusma)
+Pierre Thelusma <pierre.thelusma@philips.com>
