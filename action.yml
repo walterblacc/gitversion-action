@@ -1,36 +1,66 @@
 name: 'GitVersion'
 description: 'Git Version'
 outputs:
-  GitVersion_Major: ${{ steps.output-gitversion.outputs.GitVersion_Major }}
-  GitVersion_Minor: ${{ steps.output-gitversion.outputs.GitVersion_Minor }}
-  GitVersion_Patch: ${{ steps.output-gitversion.outputs.GitVersion_Patch }}
-  GitVersion_PreReleaseTag: ${{ steps.output-gitversion.outputs.GitVersion_PreReleaseTag }}
-  GitVersion_PreReleaseTagWithDash: ${{ steps.output-gitversion.outputs.GitVersion_PreReleaseTagWithDash }}
-  GitVersion_PreReleaseLabel: ${{ steps.output-gitversion.outputs.GitVersion_PreReleaseLabel }}
-  GitVersion_PreReleaseNumber: ${{ steps.output-gitversion.outputs.GitVersion_PreReleaseNumber }}
-  GitVersion_WeightedPreReleaseNumber: ${{ steps.output-gitversion.outputs.GitVersion_WeightedPreReleaseNumber }}
-  GitVersion_BuildMetaData: ${{ steps.output-gitversion.outputs.GitVersion_BuildMetaData }}
-  GitVersion_FullBuildMetaData: ${{ steps.output-gitversion.outputs.GitVersion_FullBuildMetaData }}
-  GitVersion_MajorMinorPatch: ${{ steps.output-gitversion.outputs.GitVersion_MajorMinorPatch }}
-  GitVersion_SemVer: ${{ steps.output-gitversion.outputs.GitVersion_SemVer }}
-  GitVersion_LegacySemVer: ${{ steps.output-gitversion.outputs.GitVersion_LegacySemVer }}
-  GitVersion_LegacySemVerPadded: ${{ steps.output-gitversion.outputs.GitVersion_LegacySemVerPadded }}
-  GitVersion_AssemblySemVer: ${{ steps.output-gitversion.outputs.GitVersion_AssemblySemVer }}
-  GitVersion_AssemblySemFileVer: ${{ steps.output-gitversion.outputs.GitVersion_AssemblySemFileVer }}
-  GitVersion_FullSemVer: ${{ steps.output-gitversion.outputs.GitVersion_FullSemVer }}
-  GitVersion_InformationalVersion: ${{ steps.output-gitversion.outputs.GitVersion_InformationalVersion }}
-  GitVersion_BranchName: ${{ steps.output-gitversion.outputs.GitVersion_BranchName }}
-  GitVersion_EscapedBranchName: ${{ steps.output-gitversion.outputs.GitVersion_EscapedBranchName }}
-  GitVersion_Sha: ${{ steps.output-gitversion.outputs.GitVersion_Sha }}
-  GitVersion_ShortSha: ${{ steps.output-gitversion.outputs.GitVersion_ShortSha }}
-  GitVersion_NuGetVersionV2: ${{ steps.output-gitversion.outputs.GitVersion_NuGetVersionV2 }}
-  GitVersion_NuGetVersion: ${{ steps.output-gitversion.outputs.GitVersion_NuGetVersion }}
-  GitVersion_NuGetPreReleaseTagV2: ${{ steps.output-gitversion.outputs.GitVersion_NuGetPreReleaseTagV2 }}
-  GitVersion_NuGetPreReleaseTag: ${{ steps.output-gitversion.outputs.GitVersion_NuGetPreReleaseTag }}
-  GitVersion_VersionSourceSha: ${{ steps.output-gitversion.outputs.GitVersion_VersionSourceSha }}
-  GitVersion_CommitsSinceVersionSource: ${{ steps.output-gitversion.outputs.GitVersion_CommitsSinceVersionSource }}
-  GitVersion_CommitsSinceVersionSourcePadded: ${{ steps.output-gitversion.outputs.GitVersion_CommitsSinceVersionSourcePadded }}
-  GitVersion_CommitDate: ${{ steps.output-gitversion.outputs.GitVersion_CommitDate }}
+  GitVersion_Major: 
+    value: ${{ steps.output-gitversion.outputs.GitVersion_Major }}
+  GitVersion_Minor: 
+    value: ${{ steps.output-gitversion.outputs.GitVersion_Minor }}
+  GitVersion_Patch: 
+    value: ${{ steps.output-gitversion.outputs.GitVersion_Patch }}
+  GitVersion_PreReleaseTag: 
+    value: ${{ steps.output-gitversion.outputs.GitVersion_PreReleaseTag }}
+  GitVersion_PreReleaseTagWithDash: 
+    value: ${{ steps.output-gitversion.outputs.GitVersion_PreReleaseTagWithDash }}
+  GitVersion_PreReleaseLabel: 
+    value: ${{ steps.output-gitversion.outputs.GitVersion_PreReleaseLabel }}
+  GitVersion_PreReleaseNumber: 
+    value: ${{ steps.output-gitversion.outputs.GitVersion_PreReleaseNumber }}
+  GitVersion_WeightedPreReleaseNumber: 
+    value: ${{ steps.output-gitversion.outputs.GitVersion_WeightedPreReleaseNumber }}
+  GitVersion_BuildMetaData: 
+    value: ${{ steps.output-gitversion.outputs.GitVersion_BuildMetaData }}
+  GitVersion_FullBuildMetaData: 
+    value: ${{ steps.output-gitversion.outputs.GitVersion_FullBuildMetaData }}
+  GitVersion_MajorMinorPatch: 
+    value: ${{ steps.output-gitversion.outputs.GitVersion_MajorMinorPatch }}
+  GitVersion_SemVer: 
+    value: ${{ steps.output-gitversion.outputs.GitVersion_SemVer }}
+  GitVersion_LegacySemVer: 
+    value: ${{ steps.output-gitversion.outputs.GitVersion_LegacySemVer }}
+  GitVersion_LegacySemVerPadded: 
+    value: ${{ steps.output-gitversion.outputs.GitVersion_LegacySemVerPadded }}
+  GitVersion_AssemblySemVer: 
+    value: ${{ steps.output-gitversion.outputs.GitVersion_AssemblySemVer }}
+  GitVersion_AssemblySemFileVer: 
+    value: ${{ steps.output-gitversion.outputs.GitVersion_AssemblySemFileVer }}
+  GitVersion_FullSemVer: 
+    value: ${{ steps.output-gitversion.outputs.GitVersion_FullSemVer }}
+  GitVersion_InformationalVersion: 
+    value: ${{ steps.output-gitversion.outputs.GitVersion_InformationalVersion }}
+  GitVersion_BranchName: 
+    value: ${{ steps.output-gitversion.outputs.GitVersion_BranchName }}
+  GitVersion_EscapedBranchName: 
+    value: ${{ steps.output-gitversion.outputs.GitVersion_EscapedBranchName }}
+  GitVersion_Sha: 
+    value: ${{ steps.output-gitversion.outputs.GitVersion_Sha }}
+  GitVersion_ShortSha: 
+    value: ${{ steps.output-gitversion.outputs.GitVersion_ShortSha }}
+  GitVersion_NuGetVersionV2: 
+    value: ${{ steps.output-gitversion.outputs.GitVersion_NuGetVersionV2 }}
+  GitVersion_NuGetVersion: 
+    value: ${{ steps.output-gitversion.outputs.GitVersion_NuGetVersion }}
+  GitVersion_NuGetPreReleaseTagV2: 
+    value: ${{ steps.output-gitversion.outputs.GitVersion_NuGetPreReleaseTagV2 }}
+  GitVersion_NuGetPreReleaseTag: 
+    value: ${{ steps.output-gitversion.outputs.GitVersion_NuGetPreReleaseTag }}
+  GitVersion_VersionSourceSha:
+    value: ${{ steps.output-gitversion.outputs.GitVersion_VersionSourceSha }}
+  GitVersion_CommitsSinceVersionSource:
+    value: ${{ steps.output-gitversion.outputs.GitVersion_CommitsSinceVersionSource }}
+  GitVersion_CommitsSinceVersionSourcePadded:
+    value: ${{ steps.output-gitversion.outputs.GitVersion_CommitsSinceVersionSourcePadded }}
+  GitVersion_CommitDate: 
+    value: ${{ steps.output-gitversion.outputs.GitVersion_CommitDate }}
 runs:
   using: "composite"
   steps: 
